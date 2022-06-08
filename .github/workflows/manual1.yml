@@ -11,5 +11,5 @@ on:
 jobs:
   # This workflow contains a single job called "greet"
   greet:
-    uses: ./.github/workflows/manual.yml@master
+    uses: ./.github/workflows/manual.yml
     name: Maven Build

@@ -36,4 +36,4 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Send greeting
-      run: echo "${{ github.event.inputs.name }}${{ inputs.name }}"
+      run: echo "${{ github.event.inputs.name }}||${{ inputs.name }}"

@@ -28,10 +28,13 @@ jobs:
   # This workflow contains a single job called "greet"
   greet:
     # The type of runner that the job will run on
+    env:
+      name: ${{ github.event.inputs.environment || inputs.environment }}
+    environment: ${{ github.event.inputs.environment || inputs.environment }}
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Runs a single command using the runners shell
     - name: Send greeting
-      run: echo "${{ github.event.inputs.name || inputs.name }}"
+      run: echo "${{ env.name }}"
